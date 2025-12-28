@@ -1,0 +1,357 @@
+h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3.625rem;
+  text-decoration: none;
+  color: #363E45; }
+
+h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-decoration: none;
+  color: #363E45; }
+
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #363E45; }
+
+h4, label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #363E45; }
+
+h5, p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #363E45;
+  opacity: 64%; }
+
+p.Copyright {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-decoration: none;
+  color: #363E45; }
+
+.Content {
+  display: flex;
+  gap: 7.5rem;
+  flex-direction: column; }
+
+.Hidden {
+  display: none; }
+
+.Menu {
+  display: flex;
+  gap: 0.5rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .MenuItem .Link {
+    display: block;
+    border: 0.0625rem solid rgba(152, 163, 174, 0.48);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    text-decoration: none;
+    color: #363E45; }
+
+.Image {
+  height: 25rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem; }
+
+#header {
+  height: 6rem;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: space-between; }
+
+#about .Image {
+  margin-top: 2.5rem;
+  width: 100%; }
+
+#experience {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column; }
+  #experience .Job {
+    display: flex;
+    gap: 2rem; }
+    #experience .Job .Desc {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column; }
+      #experience .Job .Desc .Position {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column; }
+      #experience .Job .Desc .Texts {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column; }
+
+#footer {
+  height: 9rem;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: space-between; }
+  #footer .Socials {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    #footer .Socials .Social {
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      align-items: center;
+      width: 1.5rem;
+      height: 1.5rem; }
+
+#education {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column; }
+  #education .Schools {
+    display: flex;
+    gap: 2rem; }
+    #education .Schools .SchoolsColumn {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      flex: 1; }
+      #education .Schools .SchoolsColumn .School {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column; }
+        #education .Schools .SchoolsColumn .SchoolDesc {
+          display: flex;
+          gap: 0.5rem;
+          flex-direction: column; }
+
+#skills {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column; }
+  #skills .Skills {
+    display: flex;
+    gap: 0; }
+    #skills .Skills .Left {
+      margin-left: -1rem; }
+    #skills .Skills .Right {
+      margin-right: -1rem; }
+    #skills .SkillsColumn {
+      flex: 1; }
+      #skills .SkillsColumn .BarItem {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        padding: 1rem; }
+        #skills .SkillsColumn .BarItem .ProgressBar {
+          width: 100%;
+          height: 0.5rem;
+          appearance: none; }
+          @supports (-moz-appearance: none) {
+            #skills .SkillsColumn .BarItem .ProgressBar {
+              -moz-appearance: none;
+              height: 0.5rem;
+              background-color: rgba(152, 163, 174, 0.12);
+              border-radius: 0.25rem; }
+              #skills .SkillsColumn .BarItem .ProgressBar::-moz-progress-bar {
+                height: 0.5rem;
+                background-color: #363E45;
+                border-radius: 0.25rem; } }
+          @supports (-webkit-appearance: none) {
+            #skills .SkillsColumn .BarItem .ProgressBar {
+              -webkit-appearance: none; }
+              #skills .SkillsColumn .BarItem .ProgressBar::-webkit-progress-bar {
+                height: 0.5rem;
+                background-color: rgba(152, 163, 174, 0.12);
+                border-radius: 0.25rem; }
+              #skills .SkillsColumn .BarItem .ProgressBar::-webkit-progress-value {
+                height: 0.5rem;
+                background-color: #363E45;
+                border-radius: 0.25rem; } }
+  #skills .AddNew {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(152, 163, 174, 0.12); }
+    #skills .AddNewForm {
+      display: flex;
+      gap: 1rem;
+      margin: 0; }
+      #skills .AddNewForm .Form {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        flex: 1; }
+        #skills .AddNewForm .Form input {
+          border: 0.0625rem solid rgba(152, 163, 174, 0.48);
+          border-radius: 0.5rem;
+          height: 3rem; }
+      #skills .AddNewForm .Add {
+        margin: 0;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        text-decoration: none;
+        color: #363E45;
+        align-self: end;
+        width: 4.0625rem;
+        height: 3rem;
+        background-color: #2F3337;
+        border-radius: 0.5rem;
+        color: white;
+        border: none; }
+
+#contacts {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column; }
+  #contacts .Contacts {
+    display: flex;
+    gap: 2rem; }
+    #contacts .ContactsBox {
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+      padding: 2rem;
+      justify-content: space-between;
+      flex: 1;
+      height: 25rem;
+      box-sizing: border-box;
+      background-color: rgba(152, 163, 174, 0.12);
+      border-radius: 0.5rem; }
+      #contacts .ContactsBox img {
+        width: 2.5rem;
+        height: 2.5rem; }
+      #contacts .ContactsBox .Desc {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column; }
+        #contacts .ContactsBox .Desc a {
+          text-decoration: none;
+          color: #363E45; }
+
+@media (max-width: 25rem) {
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    text-decoration: none;
+    color: #363E45; }
+
+  h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    text-decoration: none;
+    color: #363E45; }
+
+  .Content {
+    display: flex;
+    gap: 3.75rem;
+    flex-direction: column; }
+    .Content header, .Content section, .Content footer {
+      margin: 0 1rem; }
+
+  .Image {
+    width: 100%;
+    aspect-ratio: 1;
+    height: max-content; }
+
+  #education, #education .Schools,
+  #experience, #skills, #contacts {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column; }
+
+  #experience .Job,
+  #skills .Skills, #skills .SkillsColumn,
+  #skills .AddNewForm, #footer {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column; }
+
+  #header {
+    height: 5rem; }
+    #header .MenuItem:not(:last-child) {
+      display: none; }
+    #header li {
+      width: 6rem; }
+
+  #about .Image {
+    margin-top: 2rem; }
+
+  #experience .Title {
+    white-space: pre-line; }
+  #experience .MenuItem {
+    flex: 1;
+    text-align: center; }
+  #experience .Job .Image {
+    order: -1; }
+  #experience .Job .Desc .Texts {
+    display: none; }
+
+  #skills .Skills .SkillsColumn {
+    margin: 0; }
+    #skills .Skills .SkillsColumn .BarItem {
+      padding: 0; }
+      #skills .Skills .SkillsColumn .BarItem .What {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between; }
+        #skills .Skills .SkillsColumn .BarItem .What::after {
+          content: url("img/close.svg"); }
+  #skills .AddNew {
+    padding: 1rem; }
+    #skills .AddNewForm .Add {
+      width: 100%; }
+
+  #contacts .Contacts {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column; }
+    #contacts .ContactsBox {
+      padding: 1rem;
+      height: 10rem;
+      flex: auto; }
+      #contacts .ContactsBox img {
+        width: 1.5rem;
+        height: 1.5rem; }
+
+  #contacts, #footer {
+    border-top: 1px solid transparent; }
+
+  #footer {
+    height: 5.5rem;
+    justify-content: start; } }
+
+/*# sourceMappingURL=custom.css.map */
