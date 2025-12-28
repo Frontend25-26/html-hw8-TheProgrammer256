@@ -1,0 +1,376 @@
+$bd-color: #98A3AE;
+$text-color: #363E45;
+$button-color: #2F3337;
+$grayed-op: 64%;
+$grayed-border: 48%;
+$grayed-bg: 12%;
+
+@mixin set-text($size, $height) {
+  margin: 0;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $height;
+  text-decoration: none;
+  color: $text-color;
+}
+
+@mixin horiz($gap) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin vert($gap) {
+  @include horiz($gap);
+  flex-direction: column;
+}
+
+@mixin grayed {
+  opacity: $grayed-op;
+}
+
+@mixin list($gap) {
+  @include horiz($gap);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin spacer($height) {
+  height: $height;
+  @include horiz(0);
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin barline($color) {
+	height: 0.5rem;
+	background-color: $color;
+	border-radius: 0.25rem;
+}
+
+@mixin thin-border() {
+	border: 0.0625rem solid rgba($bd-color, $grayed-border);
+   border-radius: 0.5rem;
+}
+
+h1 {
+  @include set-text(3rem, 3.625rem);
+}
+
+h2 {
+  @include set-text(3rem, 3rem);
+}
+
+h3 {
+  @include set-text(1.25rem, 1.5rem);
+}
+
+h4, label {
+  @include set-text(1rem, 1.5rem);
+}
+
+h5, p {
+  @include set-text(1rem, 1.5rem);
+  @include grayed;
+}
+
+p.Copyright {
+  @include set-text(0.875rem, 1rem);
+}
+
+.Content {
+  @include vert(7.5rem);
+}
+
+.Hidden {
+  display: none;
+}
+
+.Menu {
+  @include list(0.5rem);
+  &Item .Link {
+      display: block;
+      @include thin-border();
+      padding: 1rem 1.25rem;
+      @include set-text(0.875rem, 0.875rem);
+  }
+}
+
+.Image {
+  height: 25rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+#header {
+  @include spacer(6rem);
+}
+
+#about .Image {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+#experience {
+  @include vert(2.5rem);
+  .Job {
+    @include horiz(2rem);
+    .Desc {
+      @include vert(1rem);
+      .Position {
+        @include vert(0.5rem);
+      }
+      .Texts {
+        @include vert(1rem);
+      }
+    }
+  }
+}
+
+#footer {
+@include spacer(9rem);
+  .Socials {
+    @include list(2rem);
+    .Social {
+      @include horiz(0);
+      justify-content: center;
+      align-items: center;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+#education {
+	@include vert(2.5rem);
+	.Schools {
+		@include horiz(2rem);
+		.SchoolsColumn {
+			@include vert(2rem);
+			flex: 1;
+			.School {
+				@include vert(1rem);
+				&Desc {
+					@include vert(0.5rem);
+				}
+			}
+		}
+	}
+}
+
+#skills {
+	@include vert(2.5rem);
+	.Skills {
+		@include horiz(0);
+		.Left {
+			margin-left: -1rem;
+		}
+		.Right {
+			margin-right: -1rem;
+		}
+		&Column {
+			flex: 1;
+			.BarItem {
+				@include vert(1rem);
+				padding: 1rem;
+				.ProgressBar {
+					width: 100%;
+					height: 0.5rem;
+          appearance: none;
+          @supports (-moz-appearance: none) {
+          	-moz-appearance: none;
+          	@include barline(rgba($bd-color, $grayed-bg));
+          	&::-moz-progress-bar {
+	          	@include barline($text-color);
+	          }
+          }
+
+          @supports (-webkit-appearance: none) {
+          	-webkit-appearance: none;
+          	&::-webkit-progress-bar {
+	          	@include barline(rgba($bd-color, $grayed-bg));
+	          }
+	          &::-webkit-progress-value {
+	          	@include barline($text-color);
+	          }
+          }
+				}
+			}
+		}
+	}
+	.AddNew {
+		@include vert(2rem);
+		padding: 2rem;
+		border-radius: 0.5rem;
+		background-color: rgba($bd-color, $grayed-bg);
+		&Form {
+			@include horiz(1rem);
+			margin: 0;
+			.Form {
+				@include vert(0.5rem);
+				flex: 1;
+				input {
+					@include thin-border();
+					height: 3rem;
+				}
+			}
+			.Add {
+				@include set-text(0.875rem, 1rem);
+				align-self: end;
+				width: 4.0625rem;
+				height: 3rem;
+				background-color: $button-color;
+				border-radius: 0.5rem;
+				color: white;
+				border: none;
+			}
+		}
+	}
+}
+
+#contacts {
+	@include vert(2.5rem);
+	.Contacts {
+		@include horiz(2rem);
+		&Box {
+			@include vert(0);
+			padding: 2rem;
+			justify-content: space-between;
+			flex: 1;
+			height: 25rem;
+			box-sizing: border-box;
+			background-color: rgba($bd-color, $grayed-bg);
+			border-radius: 0.5rem;
+
+			img {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+
+			.Desc {
+				@include vert(0.5rem);
+
+				a {
+					text-decoration: none;
+					color: $text-color;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 25rem) {
+	h1 {
+	  @include set-text(2.25rem, 2.75rem);
+	}
+
+	h2 {
+	  @include set-text(2.25rem, 2.25rem);
+	}
+
+	.Content {
+		@include vert(3.75rem);
+
+		header, section, footer {
+			margin: 0 1rem;
+		}
+	}
+
+	.Image {
+		width: 100%;
+		aspect-ratio: 1;
+		height: max-content;
+	}
+
+	#education, #education .Schools,
+	#experience, #skills, #contacts {
+		@include vert(2rem);
+	}
+
+	#experience .Job,
+	#skills .Skills, #skills .SkillsColumn,
+	#skills .AddNewForm, #footer {
+		@include vert(1.5rem);
+	}
+
+	#header {
+		height: 5rem;
+
+		.MenuItem:not(:last-child) {
+			display: none;
+		}
+
+		li {
+			width: 6rem;
+		}
+	}
+
+	#about .Image  {
+		margin-top: 2rem;
+	}
+
+	#experience {
+		.Title {
+			white-space: pre-line;
+		}
+		.MenuItem {
+			flex: 1;
+			text-align: center;
+		}
+		.Job {
+			.Image {
+				order: -1;
+			}
+			.Desc .Texts {
+				display: none;
+			}
+		}
+	}
+
+	#skills {
+		.Skills .SkillsColumn {
+			margin: 0;
+			.BarItem {
+				padding: 0;
+				.What {
+					display: inline-flex;
+					align-items: center;
+					justify-content: space-between;
+					&::after {
+						content: url('img/close.svg');
+					}
+				}
+			}
+		}
+		.AddNew {
+			padding: 1rem;
+			&Form .Add {
+				width: 100%;
+			}
+		}
+	}
+
+	#contacts .Contacts {
+		@include vert(1rem);
+		&Box {
+			padding: 1rem;
+			height: 10rem;
+			flex: auto;
+
+			img {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+	}
+
+	#contacts, #footer {
+		border-top: 1px solid transparent;
+	}
+
+	#footer {
+		height: 5.5rem;
+		justify-content: start;
+	}
+}
