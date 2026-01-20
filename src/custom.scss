@@ -218,7 +218,7 @@ p.Copyright {
 			.Add {
 				@include set-text(0.875rem, 1rem);
 				align-self: end;
-				width: 4.0625rem;
+				width: 65px;
 				height: 3rem;
 				background-color: $button-color;
 				border-radius: 0.5rem;
@@ -260,7 +260,7 @@ p.Copyright {
 	}
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 400px) {
 	h1 {
 	  @include set-text(2.25rem, 2.75rem);
 	}
